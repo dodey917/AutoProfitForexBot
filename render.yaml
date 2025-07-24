@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: forex-experts-bot
+    env: python
+    region: singapore  # Choose closest to your audience
+    plan: free  # Upgrade as needed
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: 8440264312:AAGgPJ8wfy5WCtF7RPG1jCE6nHZwCEpizWc # From @BotFather
+      - key: ADMIN_ID
+        value: your_admin_id  # Optional for error notifications
